@@ -1,0 +1,450 @@
+/* CSS Stylesheet */
+
+/******************************************
+Style Reset
+******************************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************************************
+sitewide
+******************************************/
+
+body {
+  background: rgb(255,255,255);
+  font-family: 'Lato', sans-serif;
+  color: rgb(62,57,59);
+}
+
+::selection {
+  background: rgb(200,200,200); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: rgb(200,200,200); /* Gecko Browsers */
+}
+::-webkit-selection {
+  background: rgb(200,200,200); /* Gecko Browsers */
+}
+
+/******************************************
+nav
+******************************************/
+
+header.scroll {
+  animation-name: pageScroll;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pageScroll {
+  from {padding-top: 12vw;}
+  to {padding-top: 0vw;}
+}
+
+a.logo {
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 700;
+  margin: 5vh 3vw 5vh 3vw;
+  padding: 5vh 2vw 5vh 2vw;
+  color: rgb(62,57,59);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+a.logo.morning:hover {
+  color: rgb(255,170,225);
+  transition: 0.5s ease;
+}
+
+a.logo.afternoon:hover {
+  color: rgb(135,187,244);
+  transition: 0.5s ease;
+}
+
+a.logo.evening:hover {
+  color: rgb(211,168,54);
+  transition: 0.5s ease;
+}
+
+a.welcome {
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 700;
+  float: right;
+  margin: 5vh 3vw 5vh 3vw;
+  padding: 5vh 2vw 5vh 2vw;
+  height: auto;
+}
+
+.morning{
+  color: rgb(255,170,225);
+}
+
+.afternoon{
+  color: rgb(135,187,244);
+}
+
+.evening{
+  color: rgb(211,168,54);
+}
+
+/******************************************
+body
+******************************************/
+
+p.statement {
+  font-size: 30pt;
+  font-weight: bold;
+  padding: 20vh 15vw 45vh 15vw;
+  line-height: 130%;
+  height: auto;
+}
+
+h1 {
+  padding-left: 5vw;
+  font-size: 12pt;
+  font-weight: 900;
+  line-height: 130%;
+  height: auto;
+}
+
+h2 {
+  font-size: 30pt;
+  font-weight: 600;
+  color: rgb(255,255,255);
+  line-height: 120%;
+  width: 70vw;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+section {
+  padding: 100px 0vw 100px 0px;
+}
+
+.container {
+  position: relative;
+  width: 90vw;
+  margin: 0px 0px 100px 5vw;
+}
+
+.container:hover .overlay {
+  opacity: 0.1;
+  transition: opacity 1.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 90vw;
+  opacity: 1;
+  background-color: rgb(0,0,0);
+  transition: opacity 1.5s ease;
+}
+
+div.color1 {
+  background-color: rgb(187,83,118);
+  background-color: rgb(12,7,9);
+}
+
+div.color2 {
+  background-color: rgb(1,1,1);
+  background-color: rgb(12,7,9);
+}
+
+div.color3 {
+  background-color: rgb(47,151,114);
+  background-color: rgb(12,7,9);
+}
+
+img.cover {
+  display: block;
+  width: 90vw;
+  height: auto;
+}
+
+div.container2 {
+  text-align: center;
+}
+
+div.experience {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 350px;
+  width: 400px;
+  padding: 30px 0vw;
+}
+
+h3.experience {
+  display: inline-block;
+  font-size: 12pt;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+p.experience {
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 140%;
+}
+
+.experience p.date {
+  font-weight: 300;
+  display: inline-block;
+  position: absolute;
+  font-size: 12pt;
+  left: -65px;
+  top: 30px;
+  color: rgb(187,187,187);
+  color: rgb(62,57,59);
+}
+
+img.love {
+  display: block;
+  width: 90vw;
+  height: auto;
+  padding: 5vw 0vw 0vw 5vw;
+}
+
+div.container3 {
+  text-align: center;
+  padding: 75px 0px 0px 0px;
+}
+
+.links {
+  padding-bottom: 75px;
+}
+
+a.contact {
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 700;
+  float: right;
+  margin: 5vh 3vw 5vh 3vw;
+  padding: 5vh 2vw 5vh 2vw;
+  height: auto;
+}
+
+a.contact.morning:hover {
+  color: rgb(255,170,225);
+  transition: 0.5s ease;
+}
+
+a.contact.afternoon:hover {
+  color: rgb(135,187,244);
+  transition: 0.5s ease;
+}
+
+a.contact.evening:hover {
+  color: rgb(211,168,54);
+  transition: 0.5s ease;
+}
+
+a.footer {
+  position: relative;
+  float: none;
+  text-decoration: underline;
+  text-decoration: none;
+  margin: 0px 0px;
+  padding: 10px 10px;
+  color: rgb(62,57,59);
+}
+
+/******************************************
+footer
+******************************************/
+
+div.container4 {
+  text-align: center;
+}
+
+div.credits p {
+  font-size: 10pt;
+  font-weight: 200;
+  color: rgb(187,187,187);
+  padding: 0px 0px 100px 0px;
+  margin: 0px 0px;
+}
+
+/******************************************
+case studies
+******************************************/
+
+a.back {
+  position: fixed;
+  right: 0px;
+  float: right;
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 700;
+  margin: 5vh 3vw 5vh 3vw;
+  padding: 5vh 2vw 5vh 2vw;
+  color: rgb(62,57,59);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.title {
+  font-size: 30pt;
+  font-weight: 700;
+  padding: 35vh 50vw 5vh 5vw;
+  line-height: 130%;
+  height: auto;
+  color: rgb(187,187,187);
+}
+
+.subtitle {
+  font-size: 30pt;
+  font-weight: 700;
+  padding: 5vh 50vw 5vh 5vw;
+  line-height: 130%;
+  height: auto;
+}
+
+.main {
+  width: 80vw;
+  padding: 10vh 5vw 75px 5vw;
+}
+
+.section {
+  padding: 0px 50vw 25px 5vw;
+}
+
+.text {
+  display: block;
+  clear: both;
+  width: 450px;
+  padding: 0px 5vw 0px 5vw;
+  line-height: 160%;
+  font-size: 13pt;
+  color: rgb(118,118,118);
+  font-weight: 400;
+}
+
+.nav {
+  text-decoration: none;
+}
+
+a.nav.morning:hover {
+  color: rgb(255,170,225);
+  transition: 0.5s ease;
+}
+
+a.nav.afternoon:hover {
+  color: rgb(135,187,244);
+  transition: 0.5s ease;
+}
+
+a.nav.evening:hover {
+  color: rgb(211,168,54);
+  transition: 0.5s ease;
+}
+
+.spacing {
+  padding: 75px 0px 75px 0px;
+}
+
+.secondary {
+  width: 70vw;
+  padding: 0px 5vw 0px 5vw;
+}
+
+.primary {
+  width: 80vw;
+  padding: 0px 5vw 0px 5vw;
+}
+
+h4 {
+  padding: 0px 10vw 0px 5vw;
+  width: 70vw;
+  font-size: 8vw;
+  color: rgb(187,187,187);
+  font-weight: 800;
+}
+
+.buildProcess {
+  display: inline-block;
+  float: left;
+  padding: 0px 0px 0px 0px;
+  line-height: 160%;
+  font-size: 13pt;
+  color: rgb(118,118,118);
+  font-weight: 400;
+}
+
+.container5 {
+  display: block;
+  clear: both;
+  width: 450px;
+  padding: 0px 0px 0px 7vw;
+}
+
+@media only screen and (max-width: 700px) {
+  h4 {
+    font-size: 50pt;
+  }
+  .container5 {
+    padding: 0px 0px 0px 7.4vw;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .secondary {
+    width: 400px;
+  }
+  .main {
+    width: 400px;
+  }
+  .text {
+    width: 400px;
+  }
+  .container5 {
+    width: 400px;
+    padding: 0px 0px 0px 7.7vw;
+  }
+}
