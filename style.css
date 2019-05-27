@@ -411,6 +411,15 @@ a.back {
   font-weight: 400;
 }
 
+.embededLink {
+  display: inline-block;
+  width: auto;
+  line-height: 160%;
+  font-size: 13pt;
+  color: rgb(118,118,118);
+  font-weight: 400;
+}
+
 .nav {
   text-decoration: none;
   display: block;
