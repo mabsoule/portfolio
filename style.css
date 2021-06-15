@@ -41,10 +41,16 @@ table {
 sitewide
 ******************************************/
 
-body {
-  background: rgb(255,255,255);
-  font-family: 'Lato', sans-serif;
-  color: rgb(62,57,59);
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background: rgb(255,255,255);
+    font-family: 'Lato', sans-serif;
+    color: rgb(62,57,59);
 }
 
 ::selection {
@@ -75,20 +81,31 @@ header.scroll {
   to {padding-top: 0vw;}
 }
 
+div.greeting {
+    width: 100vw;
+    height: 100px;
+}
+
+a.welcome {
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 700;
+  float: right;
+  margin: 40px 3vw 0px 3vw;
+  padding: 40px 2vw 0px 2vw;
+  height: auto;
+}
+
 a.logo {
   display: inline-block;
   text-decoration: none;
   transition: color 0.5s ease;
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: 700;
-  padding: 30vh 0vw 5vh 5vw;
+  padding: 80px 5vw 40px 5vw;
   line-height: 130%;
   height: auto;
   color: rgb(187,187,187);
-}
-
-@media only screen and (max-width: 700px) {
-  a.logo {font-size: 21pt;}
 }
 
 a.logo.morning:hover {
@@ -97,7 +114,8 @@ a.logo.morning:hover {
 }
 
 a.logo.afternoon:hover {
-  color: rgb(135,187,244);
+  /* color: rgb(135,187,244); */
+  color: rgb(19,72,28);
   transition: color 0.5s ease;
 }
 
@@ -106,26 +124,23 @@ a.logo.evening:hover {
   transition: color 0.5s ease;
 }
 
-a.welcome {
-  display: inline-block;
-  font-size: 10pt;
-  font-weight: 700;
-  float: right;
-  margin: 5vh 3vw 5vh 3vw;
-  padding: 5vh 2vw 5vh 2vw;
-  height: auto;
-}
-
 .morning{
   color: rgb(255,170,225);
 }
 
 .afternoon{
-  color: rgb(135,187,244);
+  /* color: rgb(135,187,244); */
+  color: rgb(19,72,28);
 }
 
 .evening{
   color: rgb(211,168,54);
+}
+
+@media only screen and (min-width: 750px) {
+  a.logo {
+    font-size: 30pt;
+  }
 }
 
 /******************************************
@@ -133,17 +148,12 @@ body
 ******************************************/
 
 p.statement {
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: bold;
-  width: 65vw;
-  padding: 20vh 15vw 45vh 5vw;
-  padding: 5vh 0vw 15vh 5vw;
+  width: 75vw;
+  padding: 40px 0vw 80px 5vw;
   line-height: 130%;
   height: auto;
-}
-
-@media only screen and (max-width: 700px) {
-  p.statement {font-size: 21pt;}
 }
 
 h1 {
@@ -154,73 +164,59 @@ h1 {
   height: auto;
 }
 
-h2 {
-  font-size: 12pt;
-  font-weight: 600;
-  color: rgb(255,255,255);
-  line-height: 120%;
-  width: 70vw;
-  text-align: left;
-  position: absolute;
-  top: 93%;
-  left: 42%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.year {
-  top: 7%;
-  left: 42%;
-  opacity: 0;
-  transition: opacity 1.5s ease;
-}
-
 section {
-  padding: 100px 0vw 100px 0px;
+  padding: 50px 0vw 50px 0px;
 }
 
 .container {
   position: relative;
+  text-align: center;
   width: 90vw;
   height: auto;
   overflow: hidden;
-  margin: 0px 0px 100px 5vw;
+  margin: 0px 0px 50px 5vw;
 }
 
-@media only screen and (max-width: 700px) {
-  section {
-    padding: 50px 0vw 50px 0px;
-  }
-  h2 {
-    font-size: 8pt;
-  }
-  .container {
-    margin: 0px 0px 50px 5vw;
-  }
-}
-
-.container:hover .overlay {
-  opacity: 0.1;
-  transition: opacity 1.5s ease;
-}
-
-.container:hover .year {
-  opacity: 1;
-  transition: opacity 1.5s ease;
+img.cover {
+  object-fit: cover;
+  width: 100%;
+  height: 325px;
 }
 
 .overlay {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
-  height: 100%;
   width: 90vw;
-  opacity: 0.8;
+  height: 325px;
+  opacity: 0.4;
   background-color: rgb(0,0,0);
   transition: opacity 1.5s ease;
+}
+
+h2 {
+  font-size: 10pt;
+  font-weight: 600;
+  color: rgb(255,255,255);
+  line-height: 120%;
+  position: absolute;
+  text-align: left;
+}
+
+.year {
+  top: 25px;
+  left: 25px;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.covertitle {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
 }
 
 div.color1 {
@@ -235,33 +231,28 @@ div.color3 {
   background-color: rgb(12,7,9);
 }
 
-img.cover {
-  display: block;
-  width: 90vw;
-  height: auto;
-}
-
 div.container2 {
-  text-align: center;
+  text-align: left;
+  padding-left: 5vw;
 }
 
 div.experience {
   display: inline-block;
   position: relative;
   text-align: left;
-  width: 400px;
   padding: 30px 0vw;
+  width: 75vw;
 }
 
 h3.experience {
   display: inline-block;
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: 600;
   padding-bottom: 15px;
 }
 
 p.experience {
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: 300;
   line-height: 140%;
 }
@@ -270,24 +261,12 @@ p.experience {
   font-weight: 300;
   display: inline-block;
   position: absolute;
-  font-size: 12pt;
+  font-size: 10pt;
   left: -65px;
   top: 30px;
   color: rgb(62,57,59);
-  opacity: 1;
+  opacity: 0;
 }
-
-@media only screen and (max-width: 700px) {
-  .experience p.date {
-    opacity: 0;
-  }
-  div.container2 {
-    text-align: left;
-    padding-left: 5vw;
-  }
-
-}
-
 
 img.love {
   display: block;
@@ -298,11 +277,11 @@ img.love {
 
 div.container3 {
   text-align: center;
-  padding: 75px 0px 0px 0px;
+  padding: 50px 0px 0px 0px;
 }
 
 .links {
-  padding-bottom: 75px;
+  padding-bottom: 50px;
 }
 
 a.contact {
@@ -321,7 +300,7 @@ a.contact.morning:hover {
 }
 
 a.contact.afternoon:hover {
-  color: rgb(135,187,244);
+  color: rgb(19,72,28);
   transition: 0.5s ease;
 }
 
@@ -340,6 +319,78 @@ a.footer {
   color: rgb(62,57,59);
 }
 
+@media only screen and (min-width: 750px) {
+  a.logo {
+    padding-top: 100px;
+  }
+
+  p.statement {
+    font-size: 30pt;
+    width: 65vw;
+    padding: 40px 0vw 80px 5vw;
+    line-height: 130%;
+    height: auto;
+  }
+
+  img.cover {
+    height: 500px
+  }
+
+  .overlay {
+    opacity: 0.5;
+    height: 500px
+  }
+
+  .year {
+    opacity: 0;
+  }
+
+  .container {
+    margin: 0px 0px 100px 5vw;
+  }
+
+  .container:hover .overlay {
+    opacity: 0.1;
+    transition: opacity 1.5s ease;
+  }
+
+  .container:hover .year {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+  }
+
+  .experience p.date {
+    opacity: 1;
+    font-size: 12pt;
+  }
+
+  h2 {
+    font-size: 12pt;
+  }
+
+  section {
+    padding: 100px 0vw 100px 0px;
+  }
+
+  div.container2 {
+    text-align: center;
+  }
+
+  div.experience {
+    width: 400px;
+  }
+
+  h3.experience {
+    font-size: 12pt;
+  }
+
+  p.experience {
+    font-size: 12pt;
+  }
+
+
+}
+
 /******************************************
 footer
 ******************************************/
@@ -352,8 +403,14 @@ div.credits p {
   font-size: 10pt;
   font-weight: 200;
   color: rgb(187,187,187);
-  padding: 0px 0px 100px 0px;
+  padding: 0px 0px 40px 0px;
   margin: 0px 0px;
+}
+
+@media only screen and (min-width: 750px) {
+  div.credits p {
+    padding-bottom: 80px;
+  }
 }
 
 /******************************************
@@ -367,33 +424,33 @@ a.back {
   display: inline-block;
   font-size: 10pt;
   font-weight: 700;
-  margin: 5vh 3vw 5vh 3vw;
-  padding: 5vh 2vw 5vh 2vw;
+  margin: 50px 3vw 5vh 3vw;
+  padding: 50px 2vw 5vh 2vw;
   color: rgb(62,57,59);
   text-decoration: none;
   transition: color 0.5s ease;
 }
 
 .title {
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: 700;
-  padding: 35vh 50vw 5vh 5vw;
+  padding: 180px 20vw 40px 5vw;
   line-height: 130%;
   height: auto;
   color: rgb(187,187,187);
 }
 
 .subtitle {
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: 700;
-  padding: 5vh 50vw 5vh 5vw;
+  padding: 40px 20vw 40px 5vw;
   line-height: 130%;
   height: auto;
 }
 
 .main {
   width: 80vw;
-  padding: 10vh 5vw 75px 5vw;
+  padding: 40px 5vw 40px 5vw;
 }
 
 .section {
@@ -403,7 +460,7 @@ a.back {
 .text {
   display: block;
   clear: both;
-  width: 450px;
+  width: 80vw;
   padding: 0px 0px 0px 5vw;
   line-height: 160%;
   font-size: 13pt;
@@ -439,7 +496,7 @@ a.nav.morning:hover {
 }
 
 a.nav.afternoon:hover {
-  color: rgb(135,187,244);
+  color: rgb(19,72,28);
   transition: 0.5s ease;
 }
 
@@ -449,7 +506,7 @@ a.nav.evening:hover {
 }
 
 .spacing {
-  padding: 75px 0px 75px 0px;
+  padding: 40px 0px 40px 0px;
 }
 
 .secondary {
@@ -487,27 +544,16 @@ h4 {
   padding: 0px 0px 0px 7vw;
 }
 
-@media only screen and (max-width: 700px) {
-  h4 {
-    font-size: 50pt;
+@media only screen and (min-width: 750px) {
+  .title {
+    font-size: 30pt;
   }
-  .container5 {
-    padding: 0px 0px 0px 7.4vw;
-  }
-}
 
-@media only screen and (max-width: 575px) {
-  .secondary {
-    width: 400px;
+  .subtitle {
+    font-size: 30pt;
   }
-  .main {
-    width: 400px;
-  }
-  .text {
-    width: 400px;
-  }
-  .container5 {
-    width: 400px;
-    padding: 0px 0px 0px 7.7vw;
+
+  .spacing {
+    padding: 75px 0px 75px 0px;
   }
 }
