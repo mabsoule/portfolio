@@ -22,7 +22,7 @@ if (hours >= 0 && hours < 12) {
 
 if (hours >= 12 && hours < 17) {
   // document.getElementById("intro-greeting").innerHTML = "Good Afternoon";
-  text ='Good Afternoon 🌤';
+  text ='Good Afternoon 🌲';
   $('a#greeting').removeClass('morning');
   $('a#greeting').addClass('afternoon');
   $('a#greeting').removeClass('evening');
