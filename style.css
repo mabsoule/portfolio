@@ -212,6 +212,13 @@ h2 {
   transition: opacity 1.5s ease;
 }
 
+.type {
+  top: 25px;
+  right: 25px;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
 .covertitle {
   position: absolute;
   bottom: 25px;
@@ -345,6 +352,10 @@ a.footer {
     opacity: 0;
   }
 
+  .type {
+    opacity: 0;
+  }
+
   .container {
     margin: 0px 0px 100px 5vw;
   }
@@ -355,6 +366,11 @@ a.footer {
   }
 
   .container:hover .year {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+  }
+
+  .container:hover .type {
     opacity: 1;
     transition: opacity 1.5s ease;
   }
