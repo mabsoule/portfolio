@@ -535,10 +535,15 @@ a.nav.evening:hover {
   padding: 0px 5vw 0px 5vw;
 }
 
+.mockup {
+  width: 40vw;
+  padding: 0px 5vw 0px 30vw;
+}
+
 h4 {
   padding: 0px 10vw 0px 5vw;
   width: 70vw;
-  font-size: 8vw;
+  font-size: 30px;
   color: rgb(187,187,187);
   font-weight: 800;
 }
@@ -571,5 +576,14 @@ h4 {
 
   .spacing {
     padding: 75px 0px 75px 0px;
+  }
+
+  .mockup {
+    width: 30vw;
+    padding: 0px 5vw 0px 30vw;
+  }
+
+  h4 {
+    font-size: 40px;
   }
 }
